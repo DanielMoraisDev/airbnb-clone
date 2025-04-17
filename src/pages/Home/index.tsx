@@ -133,6 +133,8 @@ const Home = () => {
       nextDay.setDate(nextDay.getDate() + 1);
       setSelectedCheckOut(nextDay);
     }
+
+    console.log(selectedCheckIn, selectedCheckOut);
   }, [selectedCheckIn]);
 
   return (

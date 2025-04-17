@@ -4,7 +4,7 @@ import {
   getMonth,
   getYear,
   setMonth,
-  setYear,
+  // setYear,
   setHours,
   setMinutes,
 } from "date-fns";
@@ -35,14 +35,14 @@ interface DatePickerProps {
 }
 
 export function DatePicker({
-  startYear = getYear(new Date()) - 100,
-  endYear = getYear(new Date()) + 100,
+  // startYear = getYear(new Date()) - 100,
+  // endYear = getYear(new Date()) + 100,
   selected,
   onSelect,
   disabledDates,
 }: DatePickerProps) {
   const [date, setDate] = React.useState<Date>(selected ?? new Date());
-  const [selectedYear, setSelectedYear] = React.useState<string>(
+  const [_selectedYear, setSelectedYear] = React.useState<string>(
     getYear(date).toString()
   );
 
@@ -60,15 +60,15 @@ export function DatePicker({
     "Novembro",
     "Dezembro",
   ];
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
-  const years = React.useMemo(() => {
-    const start = currentYear - 80;
-    const end = currentYear;
-    return Array.from({ length: end - start + 1 }, (_, i) =>
-      (start + i).toString()
-    );
-  }, []);
+  // const years = React.useMemo(() => {
+  //   const start = currentYear - 80;
+  //   const end = currentYear;
+  //   return Array.from({ length: end - start + 1 }, (_, i) =>
+  //     (start + i).toString()
+  //   );
+  // }, []);
 
   const handleMonthChange = (month: string) => {
     const newDate = setMonth(date, months.indexOf(month));
@@ -76,11 +76,11 @@ export function DatePicker({
     onSelect(newDate);
   };
 
-  const handleYearChange = (year: string) => {
-    const newDate = setYear(date, parseInt(year));
-    setDate(newDate);
-    onSelect(newDate);
-  };
+  // const handleYearChange = (year: string) => {
+  //   const newDate = setYear(date, parseInt(year));
+  //   setDate(newDate);
+  //   onSelect(newDate);
+  // };
 
   const handleSelect = (selectData: Date | undefined) => {
     if (selectData) {

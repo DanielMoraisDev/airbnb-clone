@@ -1,5 +1,3 @@
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
-
 import {
   Accordion,
   AccordionContent,
@@ -22,6 +20,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 interface MenuItem {
   title: string;
