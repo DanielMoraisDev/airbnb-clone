@@ -139,7 +139,7 @@ const Home = () => {
     <>
       <div className="w-full flex flex-col items-center justify-center">
         <NavBarTop />
-        <div className="flex flex-col md:flex-row justify-center pt-10 pb-10 pr-5 pl-5 md:pr-20 md:pl-20 w-full h-auto md:h-150">
+        <div className="flex flex-col md:flex-row justify-center pt-10 pb-10 pr-3 pl-3 md:pr-20 md:pl-20 w-full h-auto md:h-150">
           <div
             className="flex flex-col justify-center w-full md:w-[50%] rounded-2xl h-64 md:h-auto"
             style={{
