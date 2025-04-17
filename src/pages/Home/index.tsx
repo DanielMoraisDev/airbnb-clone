@@ -159,12 +159,14 @@ const Home = () => {
               corrupti voluptate, maiores incidunt sed veritatis libero fugiat
               labore est provident asperiores nulla praesentium?
             </p>
-            <Button
-              onClick={handleClick}
-              className="max-w-[300px] cursor-pointer w-full h-10"
-            >
-              Conhecer Agora
-            </Button>
+            <div className="flex justify-center md:justify-start">
+              <Button
+                onClick={handleClick}
+                className="max-w-[300px] cursor-pointer w-full h-10"
+              >
+                Conhecer Agora
+              </Button>
+            </div>
           </div>
         </div>
 

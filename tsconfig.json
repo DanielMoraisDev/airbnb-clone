@@ -13,6 +13,7 @@
       "@utils/*": ["utils/*"],
       "@app/*": ["app/*"],
       "@assets/*": ["assets/*"]
-    }
+    },
+    "noUnusedLocals": false
   }
 }

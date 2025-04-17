@@ -179,7 +179,11 @@ const NavBarTop = ({
             </a>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button
+                  className="cursor-pointer"
+                  variant="outline"
+                  size="icon"
+                >
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
