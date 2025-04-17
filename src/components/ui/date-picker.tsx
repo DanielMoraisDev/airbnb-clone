@@ -141,7 +141,7 @@ export function DatePicker({
               <SelectTrigger className="cursor-pointer w-full">
                 <SelectValue placeholder="Mês" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="max-h-70">
                 {months.map((month) => (
                   <SelectItem
                     className="cursor-pointer"
@@ -198,7 +198,7 @@ export function DatePicker({
               <SelectTrigger className="cursor-pointer w-full">
                 <SelectValue placeholder="Hora" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="max-h-70">
                 {hours.map((hour) => (
                   <SelectItem
                     className="cursor-pointer"
@@ -222,7 +222,7 @@ export function DatePicker({
               <SelectTrigger className="cursor-pointer w-full">
                 <SelectValue placeholder="Minuto" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="max-h-70">
                 {minutes.map((minute) => (
                   <SelectItem
                     className="cursor-pointer"
