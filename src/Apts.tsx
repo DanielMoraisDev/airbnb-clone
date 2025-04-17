@@ -14,6 +14,7 @@ import {
 
 export const apts = [
   {
+    id: "abc",
     nome: "APE 506",
     mini_descricao: "Desfrute de conforto e conveniência em...",
     tipo: "Apartamento",
@@ -27,6 +28,7 @@ export const apts = [
     ],
   },
   {
+    id: "def",
     nome: "LOFT 101",
     mini_descricao: "Ideal para estadias curtas com estilo moderno.",
     tipo: "Loft",
@@ -41,6 +43,7 @@ export const apts = [
     ],
   },
   {
+    id: "ghi",
     nome: "SUÍTE MASTER",
     mini_descricao: "Luxo e privacidade em uma suíte espaçosa.",
     tipo: "Suíte",
@@ -55,6 +58,7 @@ export const apts = [
     ],
   },
   {
+    id: "jkl",
     nome: "STUDIO 207",
     mini_descricao: "Compacto, moderno e funcional para sua viagem.",
     tipo: "Studio",
@@ -69,6 +73,7 @@ export const apts = [
     ],
   },
   {
+    id: "mno",
     nome: "APE 305",
     mini_descricao: "Aconchegante com todos os itens essenciais.",
     tipo: "Apartamento",
@@ -83,6 +88,7 @@ export const apts = [
     ],
   },
   {
+    id: "pqr",
     nome: "FLAT 909",
     mini_descricao: "Comodidade e segurança para viagens de negócios.",
     tipo: "Flat",

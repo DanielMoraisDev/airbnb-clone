@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/index.tsx";
+import ItemPage from "./pages/ItemPage/index.tsx";
 
 function AppRoutes() {
   return (
@@ -13,6 +14,14 @@ function AppRoutes() {
             element={
               <>
                 <Home />
+              </>
+            }
+          />
+          <Route
+            path="/item/:id"
+            element={
+              <>
+                <ItemPage />
               </>
             }
           />

@@ -14,6 +14,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 import { apts } from "../../Apts";
 import { HouseIcon, UsersIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const imageBg = "https://deuviagem.com/wp-content/uploads/2020/11/maceio.jpg";
 
@@ -51,7 +52,7 @@ const Home = () => {
         <NavBarTop />
         <div className="flex flex-col md:flex-row justify-center pt-10 pb-10 pr-3 pl-3 md:pr-20 md:pl-20 w-full h-auto md:h-150">
           <div
-            className="flex flex-col justify-center w-full md:w-[50%] rounded-2xl h-64 md:h-auto"
+            className="flex flex-col justify-center w-full md:w-[50%] rounded-2xl h-auto"
             style={{
               backgroundImage: `url(${imageBg})`,
               backgroundRepeat: "no-repeat",
@@ -135,53 +136,58 @@ const Home = () => {
       </div>
       <div
         id="choose-local"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pr-5 pl-5 pb-20 md:pr-20 md:pl-20"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 pr-5 pl-5 pb-20 md:pr-20 md:pl-20"
       >
         {apts.map((apt, index) => (
           <Card
             key={index}
             className="h-full transition-transform duration-300 transform-gpu ease-in-out cursor-pointer hover:scale-102"
           >
-            <CardContent className="p-4 space-y-2">
-              <img
-                src={apt.imagem}
-                alt={apt.nome}
-                className="w-full h-65 object-cover rounded-md"
-              />
-              <h3 className="text-lg font-semibold">{apt.nome}</h3>
-              <p className="text-sm text-muted-foreground">
-                {apt.mini_descricao}
-              </p>
-              <p className="text-md font-medium text-primary">
-                R$ {apt.valor},00 / noite
-              </p>
-              <div className="flex flex-row gap-2">
-                <div className="flex gap-2 flex-wrap pt-2">
-                  <div className="flex items-center gap-1 text-sm">
-                    <HouseIcon />
-                    <span>{apt.tipo}</span>
+            <Link to={`/item/${apt.id}`}>
+              <CardContent className="p-4 space-y-2">
+                <img
+                  src={apt.imagem}
+                  alt={apt.nome}
+                  className="w-full h-65 object-cover rounded-md"
+                />
+                <h3 className="text-lg font-semibold">{apt.nome}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {apt.mini_descricao}
+                </p>
+                <p className="text-md font-medium text-primary">
+                  R$ {apt.valor},00 / noite
+                </p>
+                <div className="flex flex-row gap-2">
+                  <div className="flex gap-2 flex-wrap pt-2">
+                    <div className="flex items-center gap-1 text-sm">
+                      <HouseIcon />
+                      <span>{apt.tipo}</span>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 flex-wrap pt-2">
+                    <div className="flex items-center gap-1 text-sm">
+                      <UsersIcon />
+                      <span>{apt.capacidade} Pessoas</span>
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-2 flex-wrap pt-2">
-                  <div className="flex items-center gap-1 text-sm">
-                    <UsersIcon />
-                    <span>{apt.capacidade} Pessoas</span>
-                  </div>
-                </div>
-              </div>
 
-              <div className="flex gap-2 flex-wrap pt-2">
-                {apt.qualidades.map((q, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-1 text-sm text-muted-foreground"
-                  >
-                    {q.icon}
-                    <span>{q.qualidade}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
+                <div className="flex gap-2 flex-wrap pt-2">
+                  {apt.qualidades.map((q, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-1 text-sm text-muted-foreground"
+                    >
+                      {q.icon}
+                      <span>{q.qualidade}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="pt-3">
+                  <Button className="cursor-pointer">Ver Detalhes</Button>
+                </div>
+              </CardContent>
+            </Link>
           </Card>
         ))}
       </div>

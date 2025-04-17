@@ -52,13 +52,13 @@ interface NavBarTopProps {
 
 const NavBarTop = ({
   logo = {
-    url: "#",
+    url: "/",
     src: "https://media.istockphoto.com/id/1399472601/pt/vetorial/registered-trademark-symbol-line-art-style.jpg?s=612x612&w=0&k=20&c=L8yQpo6LzsAa1SCgfqAB7tk-eimtrziyCNKO5lv-mqU=",
     alt: "logo",
     title: "RN Studio",
   },
   menu = [
-    { title: "Início", url: "#" },
+    { title: "Início", url: "/" },
     // {
     // title: "Products",
     // url: "#",
@@ -124,10 +124,6 @@ const NavBarTop = ({
     //   title: "Pricing",
     //   url: "#",
     // },
-    {
-      title: "Explorar",
-      url: "#choose-local",
-    },
     {
       title: "Outros",
       url: "#",
