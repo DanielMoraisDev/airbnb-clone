@@ -151,14 +151,14 @@ const Home = () => {
           ></div>
           <div className="flex flex-col gap-5 w-full md:w-[50%] justify-center p-3 md:p-7">
             <p className="text-4xl font-bold">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Descubra seu cantinho favorito em Maceió
             </p>
             <p className="text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              itaque placeat quasi perferendis modi voluptatum reiciendis
-              corrupti voluptate, maiores incidunt sed veritatis libero fugiat
-              labore est provident asperiores nulla praesentium?
+              Venha relaxar, curtir bons momentos e aproveitar tudo o que Maceió
+              tem de melhor. Aqui é o lugar perfeito pra se acomodar, bater um
+              papo tranquilo e se sentir em casa, mesmo longe dela.
             </p>
+
             <div className="flex justify-start">
               <Button
                 onClick={handleClick}
