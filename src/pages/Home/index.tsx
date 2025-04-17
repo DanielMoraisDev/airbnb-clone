@@ -1,5 +1,5 @@
-import { Button } from "../../components/ui/button";
-import { NavBarTop } from "../../components/common/Navbar";
+import { Button } from "@/components/ui/button";
+import { NavBarTop } from "@/components/common/Navbar";
 import {
   Wifi,
   Car,
@@ -13,18 +13,17 @@ import {
   CookingPot,
   WashingMachine,
 } from "lucide-react";
-import { Input } from "../../components/ui/input";
-import { DatePicker } from "../../components/ui/date-picker";
+import { DatePicker } from "@/components/ui/date-picker";
 import { useEffect, useState } from "react";
-import { Label } from "../../components/ui/label";
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../components/ui/select";
-import { Card, CardContent } from "../../components/ui/card";
+} from "@/components/ui/select";
+import { Card, CardContent } from "@/components/ui/card";
 
 const imageBg = "https://deuviagem.com/wp-content/uploads/2020/11/maceio.jpg";
 
